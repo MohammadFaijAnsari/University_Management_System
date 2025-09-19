@@ -1,0 +1,12 @@
+<?php
+ session_start();
+ $captcha_code=substr(md5(rand(1000,9999)),0,5);
+ $_SESSION['captcha']=$captcha_code;
+ $img=imagecreatetruecolor(80,35);
+ $bg_color=imagecolorallocate($img,0,0,70);
+ imagefill($img,0,0,$bg_color);
+ $text_color=imagecolorallocate($img,255,255,255);
+ imagestring($img,15,rand(1,10),rand(1,10),$captcha_code,$text_color);
+ header("Content-type:image/jpeg");
+ imagejpeg($img);
+?>

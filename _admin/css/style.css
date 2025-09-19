@@ -1,0 +1,18 @@
+.student_view tr:nth-child(even) {
+    background-color: rgb(240, 235, 235);
+}
+
+.student_view tr:nth-child(odd) {
+    background-color: rgb(227, 241, 243);
+}
+
+/* .student_view{
+    background-color: pink;
+} */
+.student_header tr:nth-child(odd) {
+    background-color: #4facfe;
+}
+.student_heading  {
+    background-color: #93f9b9;
+}
+
